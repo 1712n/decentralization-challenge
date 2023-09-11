@@ -1,0 +1,36 @@
+Bitcoin
+
+Let's calculate average Nakamoto coefficient to determine the minimum quantity of objects needed to compromise the system. 
+The basic subsystems taken for evaluation are mining (by reward), client (by codebase), developers (by commits), exchanges (by volume), nodes (by country), ownership (by addresses).
+
+First let's calculate distribution function for each subsystem and use Lorenz curve for graphical representation. (Graphs are in the comment section of the request)
+
+Next (using the Lorenz curve) we'll calculate Gini coefficient to measure deviation from perfect equality. Gini Coefficient enhances from 0 to 1. The more even resource distribution is, the closer this coefficient is to 0. 
+
+After that for each index we'll provide Nakamoto coefficient. The higher Nakamoto Coefficient is - the more decentralized is the system. The Nakamoto Coefficient helps measure the minimum number of objects needed to compromise the subsystem (we'll take 51%).
+
+Note that none of the metrics are perfect, as, for instance, for nodes recommended best practice is to hide the block producing node behind two public relay nodes, similarly, commits aren't reliable either, same goes for mining etc. This is just one of the ways to calculate.
+
+1) BTC Node Decentralization by Country
+131 countries, 45379 nodes (see Lorenz curve graphs where diagonal line is ideal decentralization)
+
+Gini Coefficient (G) = 0.85825
+Nakamoto = 4
+
+(United States 	10602 (31.41%)
+Germany 	4821 (14.28%)
+Canada 	1446 (4.28%)
+Netherlands 	1368 (4.05%))
+
+2) Owner Decentralization by Address
+Gini Coefficient = 0.61737
+Nakamoto Coefficient = 454
+(obviously we couldn't take into account all the people on Earth or all the accounts bc Gini would be extremely close to 1).
+
+
+3)BTC Exchange Decentralization by 24h Volume
+Gini = 0.83245
+Nakamoto = 4
+
+Similarly, we could calculate mining decentralization by block reward, developers by commits to core, client decentralization by codebase, size of cumulative hash rate etc.
+
